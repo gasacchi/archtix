@@ -48,5 +48,19 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-# start i3wm
-exec i3
+# set keyboard layout to colemak
+setxkbmap --layout us --variant colemak &
+
+# start nitrogen for wallpaper
+nitrogen --restore &
+
+# start picom compositor
+picom -c -b &
+
+# loop for dwm 
+while true; do
+  dwm >/dev/null 2>&1
+done
+
+# execute dwm
+exec dwm
