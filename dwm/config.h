@@ -1,4 +1,23 @@
-/* See LICENSE file for copyright and license details. */
+/*
+ **************************************************
+  ___    __    ___    __    ___  ___  _   _  ____ 
+ / __)  /__\  / __)  /__\  / __)/ __)( )_( )(_  _)
+( (_-. /(__)\ \__ \ /(__)\( (__( (__  ) _ (  _)(_ 
+ \___/(__)(__)(___/(__)(__)\___)\___)(_) (_)(____)
+***************************************************
+             ____  _    _  __  __                  
+            (  _ \( \/\/ )(  \/  )                 
+             )(_) ))    (  )    (                  
+            (____/(__/\__)(_/\/\_)                 
+  ___  _____  _  _  ____  ____  ___        _   _  
+ / __)(  _  )( \( )( ___)(_  _)/ __)      ( )_( ) 
+( (__  )(_)(  )  (  )__)  _)(_( (_-.       ) _ (  
+ \___)(_____)(_)\_)(__)  (____)\___/  ()  (_) (_) 
+ **************************************************
+ Author: Gasacchi
+ Website: https://gasacchi.com
+ **************************************************
+ */
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
@@ -8,28 +27,34 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "JetBrainsMono Nerd Font:size=10" };
 static const char dmenufont[]       = "JetBrainsMono Nerd Font:size=10";
-static const char col_gray1[]       = "#222222";
-static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#005577";
+/* background color */
+static const char col_background[]       = "#21243d";
+/* inactive border color */
+static const char col_cream[]       = "#ffd082";
+/* font color */
+static const char col_pink[]       = "#ff7c7c";
+/* current tag and window font color */
+static const char col_navy[]       = "#21243d";
+/* top bar second color */
+static const char col_bar_pink[]        = "#ff7c7c";
 static const char *colors[][3]      = {
-	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+  /*               fg         bg         border   */
+  [SchemeNorm] = { col_pink, col_background, col_cream },
+  [SchemeSel]  = { col_navy, col_bar_pink,  col_bar_pink  },
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "", "", "", "", "" };
 
 static const Rule rules[] = {
-	/* xprop(1):
-	 *	WM_CLASS(STRING) = instance, class
+/* xprop(1):
+*	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	/* { "Gimp",     NULL,       NULL,       0,            1,           -1 }, */
+	/* { "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 }, */
+  { NULL,       NULL,       NULL,       0,            False,       -1 },
 };
 
 /* layout(s) */
@@ -39,8 +64,8 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[]=",      tile },    /* first entry is default */
-	{ "><>",      NULL },    /* no layout function means floating behavior */
+	{ "",      tile },    /* first entry is default */
+	{ "",      NULL },    /* no layout function means floating behavior */
 	{ "[M]",      monocle },
 };
 
@@ -57,27 +82,45 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_background, "-nf", col_pink, "-sb", col_bar_pink, "-sf", col_navy, NULL };
 static const char *termcmd[]  = { "st", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
-	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
+
+  /* set mod+d to exec dmenu */
+	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
+  /* set mod+return to exec st terminal */
+	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
+  /* set mod+b to toggle bar*/
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
+  /* set mod+j to next focus window*/
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
+  /* set mod+k to prev focus window*/
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
+  /* set mod+l to inc windows on master*/
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
-	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
+  /* set mod+d to dec windows on master*/
+	{ MODKEY|ShiftMask,             XK_d,      incnmaster,     {.i = -1 } },
+  /* set mod+h dec window size*/
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
+  /* set mod+l inc window size*/
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
-	{ MODKEY,                       XK_Return, zoom,           {0} },
+  /* set mod+shift+return change active window to master */
+	{ MODKEY|ShiftMask,             XK_Return, zoom,           {0} },
+  /* set mod+tab view other tag */
 	{ MODKEY,                       XK_Tab,    view,           {0} },
-	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
+  /* set mod+shift+q to kill program */
+	{ MODKEY|ShiftMask,             XK_q,      killclient,     {0} },
+  /* set mod+t to switch to tiling mode */
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
+  /* set mod+f to switch to float mode */
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
+  /* set mod+m to switch to monocle mode */
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
+  /* set mod+space to toggle float and tiling mode */
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
+  /* set mod+shift+space to toggle float */
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
@@ -93,11 +136,11 @@ static Key keys[] = {
 	TAGKEYS(                        XK_3,                      2)
 	TAGKEYS(                        XK_4,                      3)
 	TAGKEYS(                        XK_5,                      4)
-	TAGKEYS(                        XK_6,                      5)
-	TAGKEYS(                        XK_7,                      6)
-	TAGKEYS(                        XK_8,                      7)
-	TAGKEYS(                        XK_9,                      8)
-	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	/* TAGKEYS(                        XK_6,                      5) */
+	/* TAGKEYS(                        XK_7,                      6) */
+	/* TAGKEYS(                        XK_8,                      7) */
+	/* TAGKEYS(                        XK_9,                      8) */
+	{ MODKEY|ShiftMask,             XK_e,      quit,           {0} },
 };
 
 /* button definitions */
