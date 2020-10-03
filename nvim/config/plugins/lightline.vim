@@ -20,9 +20,10 @@
 " ===================================================
 
 " enable lightline
+" \   'colorscheme':'gruvbox_material',
 set laststatus=2
 let g:lightline = {
-\   'colorscheme':'gruvbox_material',
+\   'colorscheme':'dracula',
 \   'active': {
 \     'left':[[ 'mode', 'paste' ],
 \             [ 'gitbranch', 'readonly', 'filename', 'modified' ]]
