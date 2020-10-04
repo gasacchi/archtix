@@ -1,6 +1,14 @@
 chromium/
 coc/
 gtk-2.0/
+gtk-3.0/
+libfm/
+nitrogen/
+pcmanfm/
+procps/
+QtProject.conf
+uGet/*
+yay/
 yarn/
 nvim/plugged/
 nvim/autoload/
