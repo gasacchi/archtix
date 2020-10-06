@@ -28,7 +28,7 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "JetBrainsMono Nerd Font:size=9" };
 static const char dmenufont[]       = "JetBrainsMono Nerd Font:size=9";
 /* background color */
-static const char col_background[]       = "#21243d";
+static const char col_background[]       = "#21243d"; // navy
 /* inactive border color */
 static const char col_cream[]       = "#ffd082";
 /* font color */
