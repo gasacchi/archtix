@@ -1,13 +1,31 @@
 #!/bin/sh
 
 dwm_volume () {
-  MUTE=$(pamixer --get-mute)
-  LEVEL=$(pamixer --get-volume)
+  HEADPHONE=$(amixer -c 0 cget numid=27,iface=CARD | awk -F"=" 'NR == 3 {print $2;}')
+  STATUS=$(amixer sget Master |grep 'Mono:' |awk -F'[][]' '{print $6}')
+  LEVEL=$(amixer sget Master |grep 'Mono:' |awk -F'[][]' '{print $2}')
 
-  if $MUTE; then
-    printf "ﱝ %s%%\n" "$LEVEL"
+  # headphone plugged
+  if [ $HEADPHONE = 'on' ]
+  then
+    # headphone mute 
+    if [ $STATUS = 'off' ]
+    then
+      printf "ﳌ %s\n" "$LEVEL"
+    else
+      # headphone unmute
+      printf " %s\n" "$LEVEL"
+    fi
+    # headphone unplug use master volume
   else
-    printf " %s%%\n" "$LEVEL"
+    # master mute
+    if [ $STATUS = 'off' ]
+    then
+      printf "婢 %s\n" "$LEVEL"
+    else
+      # master unmute
+      printf " %s\n" "$LEVEL"
+    fi
   fi
 }
 
