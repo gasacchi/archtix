@@ -68,7 +68,7 @@ Plug 'mengelbrecht/lightline-bufferline'
 
 " Gruvbox Theme 
 Plug 'sainnhe/gruvbox-material'
-Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'arcticicestudio/nord-vim'
 
 " Plugin for rainbox parenthesis 
 Plug 'luochen1990/rainbow'

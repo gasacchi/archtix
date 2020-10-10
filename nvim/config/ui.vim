@@ -34,11 +34,11 @@ let g:gruvbox_material_enable_italic=1
 let g:gruvbox_material_palette='mix'
 set background=dark
 let g:gruvbox_material_background='hard'
- colorscheme dracula
+colorscheme nord
  " colorscheme gruvbox-material
 
 " Transparent
-" hi Normal guibg=NONE ctermbg=NONE
+hi Normal guibg=NONE ctermbg=NONE
 
 " ===================================================
 "   ____  _____  ____ 
