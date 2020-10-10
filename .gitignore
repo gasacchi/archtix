@@ -16,4 +16,5 @@ nvim/autoload/
 dwm/dwm
 VirtualBox/
 pulse/
+glib-2.0/
 obs-studio/

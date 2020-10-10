@@ -97,30 +97,30 @@ unsigned int tabspaces = 8;
 static const char *colorname[] = {
   /* 8 normal colors */
   [0] = "#000000", /* black   */
-  [1] = "#ff5555", /* red     */
-  [2] = "#50fa7b", /* green   */
-  [3] = "#f1fa8c", /* yellow  */
-  [4] = "#bd93f9", /* blue    */
-  [5] = "#ff79c6", /* magenta */
-  [6] = "#8be9fd", /* cyan    */
+  [1] = "#E83151", /* red     */
+  [2] = "#88D18A", /* green   */
+  [3] = "#FFCB47", /* yellow  */
+  [4] = "#2191FB", /* blue    */
+  [5] = "#F651A6", /* magenta */
+  [6] = "#41D3BD", /* cyan    */
   [7] = "#bbbbbb", /* white   */
 
   /* 8 bright colors */
   [8]  = "#44475a", /* black   */
-  [9]  = "#ff5555", /* red     */
-  [10] = "#50fa7b", /* green   */
-  [11] = "#f1fa8c", /* yellow  */
-  [12] = "#bd93f9", /* blue    */
-  [13] = "#ff79c6", /* magenta */
-  [14] = "#8be9fd", /* cyan    */
+  [9]  = "#E83151", /* red     */
+  [10] = "#88D18A", /* green   */
+  [11] = "#FFCB47", /* yellow  */
+  [12] = "#2191FB", /* blue    */
+  [13] = "#F651A6", /* magenta */
+  [14] = "#41D3BD", /* cyan    */
   [15] = "#ffffff", /* white   */
-	[255] = 0,
+  [255] = 0,
 
-	/* more colors can be added after 255 to use with DefaultXX */
-	[256] = "#21243d", // background
-	[257] = "#ff7c7c", // foreground
-	[258] = "#ffd082", // cream
-	[259] = "#88e1f2", // light blue
+  /* more colors can be added after 255 to use with DefaultXX */
+  [256] = "#1F1A38", // background
+  [257] = "#F9F5E3", // foreground
+  [258] = "#B07BAC", // blue bell
+  [259] = "#88D18A", // light blue
 };
 
 
