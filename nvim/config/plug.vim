@@ -62,14 +62,6 @@ Plug 'jiangmiao/auto-pairs'
 " Plugin for git manage
 Plug 'tpope/vim-fugitive'
 
-" Plugin for status line
-Plug 'itchyny/lightline.vim'
-Plug 'mengelbrecht/lightline-bufferline'
-
-" Gruvbox Theme 
-Plug 'sainnhe/gruvbox-material'
-Plug 'arcticicestudio/nord-vim'
-
 " Plugin for rainbox parenthesis 
 Plug 'luochen1990/rainbow'
 

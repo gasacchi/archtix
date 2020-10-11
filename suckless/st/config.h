@@ -97,30 +97,30 @@ unsigned int tabspaces = 8;
 static const char *colorname[] = {
   /* 8 normal colors */
   [0] = "#000000", /* black   */
-  [1] = "#E83151", /* red     */
-  [2] = "#88D18A", /* green   */
+  [1] = "#490814", /* red     */
+  [2] = "#005200", /* green   */
   [3] = "#FFCB47", /* yellow  */
-  [4] = "#2191FB", /* blue    */
-  [5] = "#F651A6", /* magenta */
-  [6] = "#41D3BD", /* cyan    */
+  [4] = "#022A50", /* blue    */
+  [5] = "#4E0429", /* magenta */
+  [6] = "#10423B", /* cyan    */
   [7] = "#bbbbbb", /* white   */
 
   /* 8 bright colors */
-  [8]  = "#44475a", /* black   */
-  [9]  = "#E83151", /* red     */
-  [10] = "#88D18A", /* green   */
+  [8]  = "#030D00", /* black   */
+  [9]  = "#490814", /* red     */
+  [10] = "#00C729", /* green   */
   [11] = "#FFCB47", /* yellow  */
-  [12] = "#2191FB", /* blue    */
-  [13] = "#F651A6", /* magenta */
-  [14] = "#41D3BD", /* cyan    */
+  [12] = "#022A50", /* blue    */
+  [13] = "#4E0429", /* magenta */
+  [14] = "#10423B", /* cyan    */
   [15] = "#ffffff", /* white   */
   [255] = 0,
 
   /* more colors can be added after 255 to use with DefaultXX */
-  [256] = "#1F1A38", // background
-  [257] = "#F9F5E3", // foreground
-  [258] = "#B07BAC", // blue bell
-  [259] = "#88D18A", // light blue
+  [256] = "#030D00", // background
+  [257] = "#80E544", // foreground
+  [258] = "#80E544", // blue bell
+  [259] = "#FFCB47", // light blue
 };
 
 

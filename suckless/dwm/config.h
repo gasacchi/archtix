@@ -28,18 +28,18 @@ static const int topbar                     = 1;        /* 0 means bottom bar */
 static const char *fonts[]                  = { "JetBrainsMono Nerd Font:size=9" };
 static const char dmenufont[]               = "JetBrainsMono Nerd Font:size=9";
 /* background color */
-static const char col_bg[]                  = "#1F1A38"; // purple navy
+static const char col_bg[]                  = "#030D00"; // purple navy
 /* inactive border color */
-static const char col_border_inactive[]     = "#F9F5E3"; // Blue Bell
+static const char col_border_inactive[]     = "#030D00"; // Blue Bell
 /* font color */
-static const char col_fg[]                  = "#F9F5E3"; // Eggshell
+static const char col_fg[]                  = "#80E544"; // Eggshell
 
 /* top bar second color */
-static const char col_bg_second[]           = "#B07BAC"; // Dark Blue gray
+static const char col_bg_second[]           = "#003B00"; // Dark Blue gray
 static const char *colors[][3]              = {
   /*               fg         bg         border   */
-  [SchemeNorm] = { col_bg_second, col_bg, col_border_inactive },
-  [SchemeSel]  = { col_bg, col_bg_second,  col_bg_second  },
+  [SchemeNorm] = { col_fg, col_bg, col_border_inactive },
+  [SchemeSel]  = { col_fg, col_bg_second,  col_fg  },
 };
 
 /* tagging */

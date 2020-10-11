@@ -20,7 +20,7 @@ alias xf='xbps-query -f' # find local package
 alias anime='cd ~/xxx/.anime/'
 
 # rust utilities
-alias ls='lsd'
+alias ls='exa'
 alias cat='bat'
 alias find='fd'
 alias du='dust'

@@ -27,18 +27,12 @@ if exists('+termguicolors')
   set termguicolors
 endif
 
-
 " Theme
-" colorscheme nord
-let g:gruvbox_material_enable_italic=1
-let g:gruvbox_material_palette='mix'
-set background=dark
-let g:gruvbox_material_background='hard'
-colorscheme nord
- " colorscheme gruvbox-material
+colorscheme hacking
+
 
 " Transparent
-hi Normal guibg=NONE ctermbg=NONE
+" hi Normal guibg=NONE ctermbg=NONE
 
 " ===================================================
 "   ____  _____  ____ 

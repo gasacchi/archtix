@@ -61,6 +61,14 @@ let g:which_key_map =  {}
 let g:which_key_map['/'] =  [':Commentary', 'toggle comment']
 let g:which_key_map[' '] =  [':let @/ = ""', 'no highlight search']
 
+" For syntax highlight
+function! <SID>SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
+nmap <Leader>h :call <SID>SynStack()<CR>
 
 " Action Mapping
 nmap <Leader>as <Plug>Sneak_s

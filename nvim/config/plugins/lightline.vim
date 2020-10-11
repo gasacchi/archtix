@@ -23,7 +23,7 @@
 " \   'colorscheme':'gruvbox_material',
 set laststatus=2
 let g:lightline = {
-\   'colorscheme':'nord',
+\   'colorscheme':'Tomorrow_Night_Blue',
 \   'active': {
 \     'left':[[ 'mode', 'paste' ],
 \             [ 'gitbranch', 'readonly', 'filename', 'modified' ]]
