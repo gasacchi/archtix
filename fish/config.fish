@@ -1,5 +1,20 @@
 set fish_greeting
 
+# fish syntax highlighting
+set fish_color_command 80E544 --bold
+set fish_color_quote 00C729 --italic
+set fish_color_redirection FFCB47
+set fish_color_end E83151
+set fish_color_error E83151
+set fish_color_param 00C729
+set fish_color_comment 005200
+set fish_color_selection --background='green'
+set fish_color_search_match --background='green'
+set fish_color_operator 80E544
+set fish_color_escape FFCB47
+set fish_color_autosuggestion 003B00
+set fish_color_cancel E83151
+
 # Alias 
 alias v=nvim
 alias vim=nvim
