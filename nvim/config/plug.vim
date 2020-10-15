@@ -63,7 +63,6 @@ Plug 'lifepillar/vim-gruvbox8'
 
 " syntax support
 Plug 'amiralies/vim-rescript'
-Plug 'rust-lang/rust.vim'
 Plug 'pangloss/vim-javascript'
 
 call plug#end()
