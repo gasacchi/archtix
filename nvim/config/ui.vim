@@ -57,6 +57,7 @@ call Hi(     'User2',            'none',              s:darker,      'bold' )
 call Hi(     'User3',            'none',              s:light,      'bold' )
 call Hi(     'User3',            'none',              s:light,      'bold' )
 " call Hi(     'ColorColumn',            s:darker,       '',      'bold' )
+call Hi(     'Todo',            'none',       s:warn,      'bold' )
 call Hi(     'CursorColumn',            s:darker,       '',      'bold' )
 call Hi(     'CursorLine',            s:darker,       '',      'bold' )
 call Hi(     'CursorLine',            s:darker,       '',      'bold' )
@@ -88,26 +89,32 @@ call Hi(     'WhichKeySeperator',               'none',            s:warn,'none'
 call Hi(     'WhichKeyDesc',               'none',            s:danger,'none' )
 call Hi(     'WhichKeyGroup',               'none',            s:danger,'none' )
 
+" lighline and bufferline
+let s:p = {
+      \ 'normal': {},
+      \ 'inactive': {},
+      \ 'insert': {},
+      \ 'replace': {},
+      \ 'visual': {},
+      \ 'tabline': {},
+      \}
+let s:p.normal.left = [[ s:lighter, s:darker ]]
+let s:p.normal.right = [[ s:lighter, s:comment ]]
+let s:p.normal.middle = [[ s:lighter, s:comment ]]
+let s:p.inactive.right = [[ s:dark, s:comment ]]
+let s:p.inactive.left = [[ s:dark, s:comment ]]
+let s:p.inactive.middle = [[ s:dark, s:comment ]]
+let s:p.insert.left = [[ s:darker, s:lighter ]]
+let s:p.replace.left = [[ s:warn, s:danger ]]
+let s:p.visual.left = [[ s:danger, s:warn ]]
+let s:p.tabline.left = [[ s:lighter, s:comment ]]
+let s:p.tabline.tabsel = [[ s:darker, s:lighter ]]
+let s:p.tabline.middle = [[ s:lighter, s:comment ]]
+let s:p.tabline.right = [[ s:lighter, s:comment ]]
+let s:p.normal.error = [[ s:danger, s:comment ]]
+let s:p.inactive.warning = [[ s:danger, s:comment ]]
 
-let g:currentmode={
-       \ 'n'  : 'NORMAL ',
-       \ 'v'  : 'VISUAL ',
-       \ 'V'  : 'V·Line ',
-       \ '' : 'V·Block ',
-       \ 'i'  : 'INSERT ',
-       \ 'R'  : 'Replace ',
-       \ 'Rv' : 'V·Replace ',
-       \ 'c'  : 'Command ',
-       \}
-set statusline=
-set statusline+=%3*\ %{toupper(g:currentmode[mode()])}
-set statusline +=%1*\ %n\ %*            "buffer number
-set statusline +=%2*%{&ff}%*            "file format
-set statusline +=%3*%y%*                "file type
-set statusline+=%2*\ %F
-set statusline+=\ %{&modified?'[+]':''}
-set statusline +=%1*%=%5l%*             "current line
-set statusline +=%2*/%L%*               "total lines
+let g:lightline#colorscheme#hacking#palette=lightline#colorscheme#fill(s:p)
 
 " }}}
 

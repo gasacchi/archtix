@@ -18,6 +18,7 @@ set fish_color_cancel E83151
 # Alias 
 alias v=nvim
 alias vim=nvim
+alias dev='cd ~/xxx/.dev'
 
 # xbps
 alias xu='doas xbps-install -Suv' # update system

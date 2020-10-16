@@ -23,7 +23,7 @@
 " \   'colorscheme':'gruvbox_material',
 set laststatus=2
 let g:lightline = {
-\   'colorscheme':'Tomorrow_Night_Blue',
+\   'colorscheme':'hacking',
 \   'active': {
 \     'left':[[ 'mode', 'paste' ],
 \             [ 'gitbranch', 'readonly', 'filename', 'modified' ]]
@@ -35,12 +35,12 @@ let g:lightline = {
 \     'gitbranch': 'fugitive#head',
 \   }
 \}
-let g:lightline.separator = {
-\   'left': "\ue0b4", 'right': "\ue0b6"
-\}
-let g:lightline.subseparator = {
-\   'left': "\ue0b5", 'right': "\ue0b7"
-\}
+" let g:lightline.separator = {
+" \   'left': "\ue0b4", 'right': "\ue0b6"
+" \}
+" let g:lightline.subseparator = {
+" \   'left': "\ue0b5", 'right': "\ue0b7"
+" \}
 let g:lightline.tabline = {
 \   'left': [['buffers']],
 \   'right': [['close']]

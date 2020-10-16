@@ -61,6 +61,10 @@ Plug 'luochen1990/rainbow'
 " theme
 Plug 'lifepillar/vim-gruvbox8'
 
+" lighline and bufferline
+Plug 'itchyny/lightline.vim'
+Plug 'mengelbrecht/lightline-bufferline'
+
 " syntax support
 Plug 'amiralies/vim-rescript'
 Plug 'pangloss/vim-javascript'
