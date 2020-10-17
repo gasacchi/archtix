@@ -1,4 +1,3 @@
-" =============================================================================
 "               ___    __    ___    __    ___  ___  _   _  ____ 
 "              / __)  /__\  / __)  /__\  / __)/ __)( )_( )(_  _)
 "             ( (_-. /(__)\ \__ \ /(__)\( (__( (__  ) _ (  _)(_ 
@@ -66,19 +65,17 @@ let g:which_key_map['q'] =  [':q', '[]quit']
 let g:which_key_map['Q'] =  [':q!', '[]quit without saving']
 
 " Action Mapping
-nmap <Leader>as <Plug>Sneak_s
-nmap <Leader>aS <Plug>Sneak_S
-let g:which_key_map.a = {
-      \ 'name': '[ﰌ]actions',
-      \ 's': '壟 sneak foward',
-      \ 'S': '鹿 sneak backward',
-      \}
+" let g:which_key_map.a = {
+      " \ 'name': '[ﰌ]actions',
+      " \ ' ': ['<Esc>']
+      " \}
 
 " Buffer Mapping
 nnoremap <Leader>bD :bdelete<SPACE>
 nnoremap <Leader>bg :buffer<SPACE>
 let g:which_key_map.b = {
       \ 'name': '[﬘]buffers',
+      \ ' ': ['<Esc>', ' close'],
       \ 'f': [':bfirst', ' first buffer'],
       \ 'l': [':blast', ' last buffer'],
       \ 'n': [':bnext', 'ﰴ next buffer'],
@@ -94,6 +91,7 @@ let g:which_key_map.b.D = ' delete(s)'
 " additional mapping on line 80
 let g:which_key_map.c = {
       \ 'name': '[ﮒ]coc',
+      \ ' ': ['<Esc>', ' close'],
       \ 'a' : ['<Plug>(coc-codeaction)', 'line action'],
       \ 'A' : ['<Plug>(coc-codeaction-selected)', 'selected action'],
       \ 'c' : [':CocList commands', 'commands'],
@@ -123,6 +121,7 @@ let g:which_key_map.c = {
 nnoremap <Leader>fe :e<SPACE>
 let g:which_key_map.f = {
       \ 'name': '[]file',
+      \ ' ': ['<Esc>', ' close'],
       \ 'W': [':wq', ' file write and exit'],
       \ 'e': 'ﱐ edit file(s)',
       \ 'w': [':w', ' file write / save'],
@@ -134,6 +133,7 @@ let g:which_key_map.f = {
 " signify config ~/.config/nvim/config/plugins/signify.vim
 let g:which_key_map.g = {
       \ 'name': '[]git',
+      \ ' ': ['<Esc>', ' close'],
       \ 'a': [':Git add %', ' add curent file'],
       \ 'A': [':Git add .', ' add all file'],
       \ 'c': [':Git commit', ' commit'],
@@ -155,6 +155,7 @@ let g:which_key_map.g = {
 " Motion (easy motio)
 let g:which_key_map.m = {
       \ 'name': '[ﮙ]motion',
+      \ ' ': ['<Esc>', ' close'],
       \ 'f': ['<Plug>(easymotion-f)', 'ﮜ char forward'],
       \ 'F': ['<Plug>(easymotion-F)', 'ﮜ char backward'],
       \ 't': ['<Plug>(easymotion-t)', 'ﮜ before char forward'],
@@ -177,6 +178,7 @@ let g:which_key_map.m = {
 " Plug Mapping
 let g:which_key_map.p = {
       \ 'name': '[]plugin',
+      \ ' ': ['<Esc>', ' close'],
       \ 's': [':PlugStatus', ' show status'],
       \ 'd': [':PlugDiff', ' show diff'],
       \ 'c': [':PlugClean', 'ﮤ clean plugin(s)'],
@@ -189,6 +191,7 @@ let g:which_key_map.p = {
 nnoremap <silent><Leader>sb :buffers<SPACE>
 let g:which_key_map.s = {
       \ 'name': '[ﰍ]search',
+      \ ' ': ['<Esc>', ' close'],
       \ 'c': [':Commands', ' commands'],
       \ 'f': [':Files', ' files'],
       \ 'g': [':GFiles', ' git files'],
@@ -204,6 +207,7 @@ let g:which_key_map.s = {
 " Terminal Mapping
 let g:which_key_map.t = {
       \ 'name': '+terminal',
+      \ ' ': ['<Esc>', ' close'],
       \ 'g': [':FloatermNew lazygit', 'lazygit'],
       \ 'f': [':FloatermNew fzf', 'fzf'],
       \ 'p': [':FloatermNew python', 'python'],
@@ -224,11 +228,15 @@ function! <SID>SynStack()
   endif
   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
-nmap <Leader>vh :call <SID>SynStack()<CR>
+nmap <Leader>vH :call <SID>SynStack()<CR>
+nmap <Leader>vh :h<Space>
 
 let g:which_key_map.v = {
       \ 'name': '[]vim',
+      \ ' ': ['<Esc>', ' close'],
       \ 'i': [':IndentLinesToggle', ' toogle indentline'],
+      \ 'h': 'ﲉ help',
+      \ 'H': ' highlight current group',
       \ 'n': [':set number', ' set number'],
       \ 'N': [':set nonumber', '料set no number'],
       \ 'r': [':set relativenumber', '尿set relativenumber'],
@@ -236,13 +244,13 @@ let g:which_key_map.v = {
       \ 'c': [':e $MYVIMRC', ' edit vim config'],
       \ 's': [':source $MYVIMRC', '勒reload vim config source'],
       \}
-let g:which_key_map.v.h = ' highlight-group on current cursor'
 
 " Window split Mapping
 nnoremap <silent><Leader>wV :vsplit<SPACE>
 nnoremap <silent><Leader>wH :split<SPACE>
 let g:which_key_map.w = {
       \ 'name': '[]window',
+      \ ' ': ['<Esc>', ' close'],
       \ 'z': [':Goyo', ' Zen Mode'],
       \ 'v': [':vsplit', ' virtual split'],
       \ 'h': [':split', ' horizontal split'],
