@@ -15,8 +15,8 @@
 "  (_/\/\_)(__)(__)(__)  (__)  (____)(_)\_)\___/(___/  ()    \/  (____)(_/\/\_)
 " =============================================================================
 " Author:  Gasacchi
-" website: https://gasacchi.com
-" licence: GPL
+" Website: https://gasacchi.com
+" Licence: GPL
 " =============================================================================
 
 " Disabling arrow key and live with it >.<
@@ -31,12 +31,14 @@ inoremap <Left> <NOP>
 inoremap <Right> <NOP>
 
 " Better window navigation
+" move to spit window easily
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 " Resize with alt + hjkl
+" resize spit window easily
 nnoremap <silent> <M-j>    :resize -2<CR>
 nnoremap <silent> <M-k>    :resize +2<CR>
 nnoremap <silent> <M-h>    :vertical resize -2<CR>
@@ -58,52 +60,40 @@ vnoremap <silent> <Leader> :silent <c-u> :silent WhichKeyVisual '<Space>'<CR>
 let g:which_key_map =  {}
 
 " Single Mapping
-let g:which_key_map['/'] =  [':Commentary', 'toggle comment']
-let g:which_key_map[' '] =  [':let @/ = ""', 'no highlight search']
-
-" For syntax highlight
-function! <SID>SynStack()
-  if !exists("*synstack")
-    return
-  endif
-  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
-endfunc
-nmap <Leader>h :call <SID>SynStack()<CR>
+let g:which_key_map['/'] =  [':Commentary', '[ﱕ]toggle comment']
+let g:which_key_map[' '] =  [':let @/ = ""', '[]no highlight search']
+let g:which_key_map['q'] =  [':q', '[]quit']
+let g:which_key_map['Q'] =  [':q!', '[]quit without saving']
 
 " Action Mapping
 nmap <Leader>as <Plug>Sneak_s
 nmap <Leader>aS <Plug>Sneak_S
 let g:which_key_map.a = {
-      \ 'name': 'actions',
-      \ 'i': [':IndentLinesToggle', 'toogle indentline'],
-      \ 'n': [':set number', 'set number'],
-      \ 'N': [':set nonumber', 'set no number'],
-      \ 'r': [':set relativenumber', 'set relativenumber'],
-      \ 'R': [':set norelativenumber', 'set no relativenumber'],
-      \ 's': 'sneak foward',
-      \ 'S': 'sneak backward',
+      \ 'name': '[ﰌ]actions',
+      \ 's': '壟 sneak foward',
+      \ 'S': '鹿 sneak backward',
       \}
 
 " Buffer Mapping
 nnoremap <Leader>bD :bdelete<SPACE>
 nnoremap <Leader>bg :buffer<SPACE>
 let g:which_key_map.b = {
-      \ 'name': '+buffers',
-      \ 'f': [':bfirst', 'go to first buffer'],
-      \ 'l': [':blast', 'go to last buffer'],
-      \ 'n': [':bnext', 'go to next buffer'],
-      \ 'p': [':bprevious', 'go to previous buffer'],
-      \ 'd': [':bdelete %', 'delete current buffer'],
-      \ 'S': [':Startify', 'lauch startify'],
+      \ 'name': '[﬘]buffers',
+      \ 'f': [':bfirst', ' first buffer'],
+      \ 'l': [':blast', ' last buffer'],
+      \ 'n': [':bnext', 'ﰴ next buffer'],
+      \ 'p': [':bprevious', 'ﰱ previous buffer'],
+      \ 'd': [':bdelete %', ' delete current buffer'],
+      \ 'S': [':Startify', ' launch startify'],
       \}
-let g:which_key_map.b.g = 'go to buffer'
-let g:which_key_map.b.D = 'delete buffer / buffers'
+let g:which_key_map.b.g = 'ﰷ go to buffer'
+let g:which_key_map.b.D = ' delete(s)'
 
 " Coc Mapping
 " coc plugin config ~/.config/nvim/config/plugins/coc.vim
 " additional mapping on line 80
 let g:which_key_map.c = {
-      \ 'name': '+coc',
+      \ 'name': '[ﮒ]coc',
       \ 'a' : ['<Plug>(coc-codeaction)', 'line action'],
       \ 'A' : ['<Plug>(coc-codeaction-selected)', 'selected action'],
       \ 'c' : [':CocList commands', 'commands'],
@@ -132,67 +122,60 @@ let g:which_key_map.c = {
 " File Mapping
 nnoremap <Leader>fe :e<SPACE>
 let g:which_key_map.f = {
-      \ 'name': '+file',
-      \ 'W': [':wq', 'file write and exit'],
-      \ 'e': 'edit file(s)',
-      \ 'w': [':w', 'file write / save'],
-      \ 'x': [':CocCommand explorer', 'open explorer'],
+      \ 'name': '[]file',
+      \ 'W': [':wq', ' file write and exit'],
+      \ 'e': 'ﱐ edit file(s)',
+      \ 'w': [':w', ' file write / save'],
+      \ 'x': [':CocCommand explorer', '况open explorer'],
       \}
 
 " Git Mapping
 " fugnitive config ~/.config/nvim/config/plugins/fugnitive.vim
 " signify config ~/.config/nvim/config/plugins/signify.vim
 let g:which_key_map.g = {
-      \ 'name': '+git',
-      \ 'a': [':Git add %', 'add curent file'],
-      \ 'A': [':Git add .', 'add all file'],
-      \ 'c': [':Git commit', 'commit'],
-      \ 'd': [':Git diff', 'git diff'],
-      \ 'D': [':Gdiffsplit', 'git diff split'],
-      \ 'g': [':Ggrep', 'git grep'],
-      \ 'h': [':SignifyToggle', 'toogle signify'],
-      \ 'H': [':SignifyToggleHighlight', 'toogle signify highlight'],
-      \ 'j': ['<plug>(signify-next-hunk)', 'next hunk'],
-      \ 'k': ['<Plug>(signify-prev-hunk)', 'prev hunk'],
-      \ 's': [':Gstatus', 'git status'],
-      \ 'l': [':Glog', 'git log'],
-      \ 'p': [':Git push', 'push'],
-      \ 'P': [':Git pull', 'pull'],
-      \ 'r': [':GRemove', 'remover'],
+      \ 'name': '[]git',
+      \ 'a': [':Git add %', ' add curent file'],
+      \ 'A': [':Git add .', ' add all file'],
+      \ 'c': [':Git commit', ' commit'],
+      \ 'd': [':Git diff', ' diff'],
+      \ 'D': [':Gdiffsplit', ' diff split'],
+      \ 'g': [':Ggrep', ' git grep'],
+      \ 'h': [':SignifyToggle', ' toogle signify'],
+      \ 'H': [':SignifyToggleHighlight', ' toogle signify highlight'],
+      \ 'j': ['<plug>(signify-next-hunk)', 'ﰚ next hunk'],
+      \ 'k': ['<Plug>(signify-prev-hunk)', 'ﰜ prev hunk'],
+      \ 's': [':Gstatus', ' status'],
+      \ 'l': [':Glog', ' log'],
+      \ 'p': [':Git push', ' push'],
+      \ 'P': [':Git pull', ' pull'],
+      \ 'r': [':GRemove', ' remover'],
       \}
 
 " Plug Mapping
 let g:which_key_map.p = {
-      \ 'name': '+plugin',
-      \ 's': [':PlugStatus', 'plug show status'],
-      \ 'd': [':PlugDiff', 'plug show diff'],
-      \ 'c': [':PlugClean', 'plug clean plugin(s)'],
-      \ 'i': [':PlugInstall', 'plug install plugin(s)'],
-      \ 'u': [':PlugUpdate', 'plug updated plugin(s)'],
-      \ 'U': [':PlugUpgrade', 'plug self upgrade'],
-      \}
-
-" Exit Mapping
-let g:which_key_map.q = {
-      \ 'name': '+exit',
-      \ 'q': [':q', 'exit'],
-      \ 'Q': [':q!', 'exit without save'],
+      \ 'name': '[]plugin',
+      \ 's': [':PlugStatus', ' show status'],
+      \ 'd': [':PlugDiff', ' show diff'],
+      \ 'c': [':PlugClean', 'ﮤ clean plugin(s)'],
+      \ 'i': [':PlugInstall', 'ﮣ install plugin(s)'],
+      \ 'u': [':PlugUpdate', 'ﮮ updated plugin(s)'],
+      \ 'U': [':PlugUpgrade', ' self upgrade'],
       \}
 
 " Search Mapping
 nnoremap <silent><Leader>sb :buffers<SPACE>
 let g:which_key_map.s = {
-      \ 'name': '+search',
-      \ 'c': [':Commands', 'commands'],
-      \ 'f': [':Files', 'search files'],
-      \ 'g': [':GFiles', 'search git files'],
-      \ 'G': [':GFiles?', 'search modified git files'],
-      \ 'b': 'search buffers',
-      \ 'B': [':Buffers', 'search fzf buffers'],
-      \ 'l': [':BLines', 'search lines buffer'],
-      \ 'L': [':Lines', 'search lines'],
-      \ 'r': [':Rg', 'search text'],
-      \ 'h': [':History', 'history'],
+      \ 'name': '[ﰍ]search',
+      \ 'c': [':Commands', ' commands'],
+      \ 'f': [':Files', ' files'],
+      \ 'g': [':GFiles', ' git files'],
+      \ 'G': [':GFiles?', ' modified git files'],
+      \ 'b': '﬘ buffers',
+      \ 'B': [':Buffers', ' fzf buffers'],
+      \ 'l': [':BLines', ' lines buffer'],
+      \ 'L': [':Lines', '靖lines'],
+      \ 'r': [':Rg', 'ﳳ text'],
+      \ 'h': [':History', ' history'],
       \}
 
 " Terminal Mapping
@@ -210,23 +193,39 @@ let g:which_key_map.t = {
       \}
 
 " VIM Config Mapping
+" For syntax highlight
+" highlight current highlight-group
+function! <SID>SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
+nmap <Leader>vh :call <SID>SynStack()<CR>
+
 let g:which_key_map.v = {
-      \ 'name': '+vimconfig',
-      \ 'c': [':e $MYVIMRC', 'edit vim config'],
-      \ 'r': [':source $MYVIMRC', 'reload vim config'],
+      \ 'name': '[]vim',
+      \ 'i': [':IndentLinesToggle', ' toogle indentline'],
+      \ 'n': [':set number', ' set number'],
+      \ 'N': [':set nonumber', '料set no number'],
+      \ 'r': [':set relativenumber', '尿set relativenumber'],
+      \ 'R': [':set norelativenumber', ' set no relativenumber'],
+      \ 'c': [':e $MYVIMRC', ' edit vim config'],
+      \ 's': [':source $MYVIMRC', '勒reload vim config source'],
       \}
+let g:which_key_map.v.h = ' highlight-group on current cursor'
 
 " Window split Mapping
 nnoremap <silent><Leader>wV :vsplit<SPACE>
 nnoremap <silent><Leader>wH :split<SPACE>
 let g:which_key_map.w = {
-      \ 'name': '+split',
-      \ 'z': [':Goyo', 'Zen Mode'],
-      \ 'v': [':vsplit', 'virtual split'],
-      \ 'h': [':split', 'horizontal split'],
+      \ 'name': '[]window',
+      \ 'z': [':Goyo', ' Zen Mode'],
+      \ 'v': [':vsplit', ' virtual split'],
+      \ 'h': [':split', ' horizontal split'],
       \}
-let g:which_key_map.w.V = 'vertical split a file'
-let g:which_key_map.w.H = 'horizontal split a file'
+let g:which_key_map.w.V = ' vertical split a file'
+let g:which_key_map.w.H = ' horizontal split a file'
 
 
 call which_key#register(' ', "g:which_key_map")
