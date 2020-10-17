@@ -36,8 +36,8 @@ Plug 'liuchengxu/vim-which-key'
 " Indent line
 Plug 'Yggdroot/indentLine'
 
-" Vim Sneak
-Plug 'justinmk/vim-sneak'
+" Vim easy motion
+Plug 'easymotion/vim-easymotion'
 
 " Surrounding text
 Plug 'tpope/vim-surround'
