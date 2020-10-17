@@ -36,16 +36,17 @@ alias xf='xbps-query -f' # find local package
 alias anime='cd ~/xxx/.anime/'
 
 # rust utilities
-alias ls='exa'
-alias cat='bat'
-alias find='fd'
-alias du='dust'
+# alias ls='exa'
+# alias cat='bat'
+# alias find='fd'
+# alias du='dust'
 # alias grep='rg'
-alias ps='procs'
-alias sed='sd'
-alias loc='tokei'
-alias top='btm' 
+# alias ps='procs'
+# alias sed='sd'
+# alias loc='tokei'
+# alias top='btm' 
 # alias grex='grex'
+# alias tldr='tldr'
 
 # PATH
 # FZF
