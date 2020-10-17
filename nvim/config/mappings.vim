@@ -59,8 +59,9 @@ vnoremap <silent> <Leader> :silent <c-u> :silent WhichKeyVisual '<Space>'<CR>
 let g:which_key_map =  {}
 
 " Single Mapping
+let g:which_key_map[' '] =  ['<Esc>', ' close']
 let g:which_key_map['/'] =  [':Commentary', '[ﱕ]toggle comment']
-let g:which_key_map[' '] =  [':let @/ = ""', '[]no highlight search']
+let g:which_key_map['h'] =  [':let @/ = ""', '[]no highlight search']
 let g:which_key_map['q'] =  [':q', '[]quit']
 let g:which_key_map['Q'] =  [':q!', '[]quit without saving']
 
