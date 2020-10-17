@@ -99,7 +99,7 @@ let s:p = {
       \ 'tabline': {},
       \}
 let s:p.normal.left = [[ s:lighter, s:darker ]]
-let s:p.normal.right = [[ s:lighter, s:comment ]]
+let s:p.normal.right = [[ s:lighter, s:darker ]]
 let s:p.normal.middle = [[ s:lighter, s:comment ]]
 let s:p.inactive.right = [[ s:dark, s:comment ]]
 let s:p.inactive.left = [[ s:dark, s:comment ]]
