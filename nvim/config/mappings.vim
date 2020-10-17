@@ -151,6 +151,29 @@ let g:which_key_map.g = {
       \ 'r': [':GRemove', ' remover'],
       \}
 
+
+" Motion (easy motio)
+let g:which_key_map.m = {
+      \ 'name': '[ﮙ]motion',
+      \ 'f': ['<Plug>(easymotion-f)', 'ﮜ char forward'],
+      \ 'F': ['<Plug>(easymotion-F)', 'ﮜ char backward'],
+      \ 't': ['<Plug>(easymotion-t)', 'ﮜ before char forward'],
+      \ 'T': ['<Plug>(easymotion-T)', 'ﮜ before char backward'],
+      \ 'w': ['<Plug>(easymotion-w)', '  word forward'],
+      \ 'W': ['<Plug>(easymotion-W)', '  forward'],
+      \ 'b': ['<Plug>(easymotion-b)', '  word backward'],
+      \ 'B': ['<Plug>(easymotion-B)', '  WORD backward'],
+      \ 'e': ['<Plug>(easymotion-e)', '  word forward'],
+      \ 'E': ['<Plug>(easymotion-E)', '  forward'],
+      \ 'ge': ['<Plug>(easymotion-ge)', '  word backward'],
+      \ 'gE': ['<Plug>(easymotion-gE)', '  WORD backward'],
+      \ 'j': ['<Plug>(easymotion-j)', ' below'],
+      \ 'k': ['<Plug>(easymotion-k)', ' above'],
+      \ 'n': ['<Plug>(easymotion-n)', '怜next search forward'],
+      \ 'N': ['<Plug>(easymotion-N)', '玲previous search backward'],
+      \ 's': ['<Plug>(easymotion-s)', ' search char forward and backward']
+      \}
+
 " Plug Mapping
 let g:which_key_map.p = {
       \ 'name': '[]plugin',
