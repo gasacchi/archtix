@@ -5,7 +5,6 @@
 ( (_-. /(__)\ \__ \ /(__)\( (__( (__  ) _ (  _)(_ 
  \___/(__)(__)(___/(__)(__)\___)\___)(_) (_)(____)
 ***************************************************
-             ____  _    _  __  __                  
             (  _ \( \/\/ )(  \/  )                 
              )(_) ))    (  )    (                  
             (____/(__/\__)(_/\/\_)                 
@@ -28,18 +27,18 @@ static const int topbar                     = 1;        /* 0 means bottom bar */
 static const char *fonts[]                  = { "JetBrainsMono Nerd Font:size=9" };
 static const char dmenufont[]               = "JetBrainsMono Nerd Font:size=9";
 /* background color */
-static const char col_bg[]                  = "#030D00"; // purple navy
+static const char col_bg[]                  = "#2E3440"; 
 /* inactive border color */
-static const char col_border_inactive[]     = "#030D00"; // Blue Bell
+static const char col_border_inactive[]     = "#3B4252";
 /* font color */
-static const char col_fg[]                  = "#80E544"; // Eggshell
+static const char col_fg[]                  = "#81A1C1"; 
 
 /* top bar second color */
-static const char col_bg_second[]           = "#003B00"; // Dark Blue gray
+static const char col_bg_second[]           = "#81A1C1"; 
 static const char *colors[][3]              = {
   /*               fg         bg         border   */
   [SchemeNorm] = { col_fg, col_bg, col_border_inactive },
-  [SchemeSel]  = { col_fg, col_bg_second,  col_fg  },
+  [SchemeSel]  = { col_bg, col_bg_second,  col_fg  },
 };
 
 /* tagging */
@@ -84,7 +83,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_bg, "-nf", col_fg, "-sb", col_bg_second, "-sf", col_fg, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_bg, "-nf", col_fg, "-sb", col_bg_second, "-sf", col_bg, NULL };
 static const char *termcmd[]  = { "st", NULL };
 
 static Key keys[] = {
