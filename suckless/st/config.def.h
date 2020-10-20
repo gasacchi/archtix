@@ -94,45 +94,38 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* Terminal colors (16 first used in escape sequence) */
-static const char *colorname[] = {
-  /* 8 normal colors */
-  [0] = "#000000", /* black   */
-  [1] = "#490814", /* red     */
-  [2] = "#005200", /* green   */
-  [3] = "#FFCB47", /* yellow  */
-  [4] = "#022A50", /* blue    */
-  [5] = "#4E0429", /* magenta */
-  [6] = "#10423B", /* cyan    */
-  [7] = "#bbbbbb", /* white   */
-
-  /* 8 bright colors */
-  [8]  = "#030D00", /* black   */
-  [9]  = "#490814", /* red     */
-  [10] = "#00C729", /* green   */
-  [11] = "#FFCB47", /* yellow  */
-  [12] = "#022A50", /* blue    */
-  [13] = "#4E0429", /* magenta */
-  [14] = "#10423B", /* cyan    */
-  [15] = "#ffffff", /* white   */
+const char *colorname[] = {
+  "#3b4252", /*  0: nord1 */
+  "#bf616a", /*  1: nord11 */
+  "#a3be8c", /*  2: nord14 */
+  "#ebcb8b", /*  3: nord13 */
+  "#81a1c1", /*  4: nord9 */
+  "#b48ead", /*  5: nord15 */
+  "#88c0d0", /*  6: nord8 */
+  "#e5e9f0", /*  7: nord5 */
+  "#4c566a", /*  8: nord3 */
+  "#bf616a", /*  9: nord11 */
+  "#a3be8c", /* 10: nord14 */
+  "#ebcb8b", /* 11: nord3 */
+  "#81a1c1", /* 12: nord9 */
+  "#b48ead", /* 13: nord15 */
+  "#8fbcbb", /* 14: nord7 */
+  "#eceff4", /* 15: nord6 */
   [255] = 0,
-
-  /* more colors can be added after 255 to use with DefaultXX */
-  [256] = "#030D00", // background
-  [257] = "#80E544", // foreground
-  [258] = "#80E544", // blue bell
-  [259] = "#FFCB47", // light blue
+  // defaults
+  [256] = "#d8dee9", /* 256: nord4 */
+  [257] = "#2e3440", /* 257: nord0 */
 };
 
-
 /*
- * Default colors (colorname index)
- * foreground, background, cursor, reverse cursor
- */
-unsigned int defaultfg = 257;
-unsigned int defaultbg = 256;
-static unsigned int defaultcs = 258;
-static unsigned int defaultrcs = 259;
-
+* Default colors (colorname index)
+* foreground, background, cursor, reverse
+* cursor
+*/
+unsigned int defaultfg = 256; /* nord4 */
+unsigned int defaultbg = 257; /* nord0 */
+unsigned int defaultcs = 256; /* nord4 */
+unsigned int defaultrcs = 8;  /* nord3 */
 /*
  * Default shape of cursor
  * 2: Block ("█")

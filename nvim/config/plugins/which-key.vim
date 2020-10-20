@@ -35,7 +35,7 @@ set timeoutlen=300
 
 " change highlight
 highlight default link WhichKey          Operator
-highlight default link WhichKeySeperator DiffAdded
+highlight default link WhichKeySeperator Constant
 highlight default link WhichKeyGroup     Identifier
 highlight default link WhichKeyDesc      Function
 highlight default link WhichKeyFloating Pmenu

@@ -141,7 +141,7 @@ let g:which_key_map.g = {
       \ 'd': [':Git diff', ' diff'],
       \ 'D': [':Gdiffsplit', ' diff split'],
       \ 'g': [':Ggrep', ' git grep'],
-      \ 'h': [':SignifyToggle', ' toogle signify'],
+      \ 'h': [':SignifyToggle', ' toggle signify'],
       \ 'H': [':SignifyToggleHighlight', ' toogle signify highlight'],
       \ 'j': ['<plug>(signify-next-hunk)', 'ﰚ next hunk'],
       \ 'k': ['<Plug>(signify-prev-hunk)', 'ﰜ prev hunk'],
@@ -243,6 +243,7 @@ let g:which_key_map.v = {
       \ 'r': [':set relativenumber', '尿set relativenumber'],
       \ 'R': [':set norelativenumber', ' set no relativenumber'],
       \ 'c': [':e $MYVIMRC', ' edit vim config'],
+      \ 'C': [':ColorToggle', ' toggle hex color'],
       \ 's': [':source $MYVIMRC', '勒reload vim config source'],
       \}
 

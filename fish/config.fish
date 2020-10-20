@@ -19,6 +19,7 @@ set fish_color_cancel E83151
 alias v=nvim
 alias vim=nvim
 alias dev='cd ~/xxx/.dev'
+alias yt='cd ~/xxx/.dev/youtube'
 
 # xbps
 alias xu='doas xbps-install -Suv' # update system
@@ -34,6 +35,7 @@ alias xf='xbps-query -f' # find local package
 
 # media
 alias anime='cd ~/xxx/.anime/'
+# mpd
 
 # rust utilities
 # alias ls='exa'
@@ -47,6 +49,7 @@ alias anime='cd ~/xxx/.anime/'
 # alias top='btm' 
 # alias grex='grex'
 # alias tldr='tldr'
+# alias hyperfine='hyperfine'
 
 # PATH
 # FZF

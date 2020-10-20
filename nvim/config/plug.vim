@@ -9,7 +9,7 @@
 " )(__  )(__)(( (_-.       \  /  _)(_  )    ( (__)  (____)(______)\___/  ()
 " \/  (____)(_/\/\_) ===================================================
 " Author:  Gasacchi website: https://gasacchi.com
-" licence: GPL
+" License: GPL
 " ===================================================
 
 
@@ -58,8 +58,11 @@ Plug 'tpope/vim-fugitive'
 " Plugin for rainbox parenthesis 
 Plug 'luochen1990/rainbow'
 
+" Plugin highlight hex color
+Plug 'chrisbra/Colorizer'
+
 " theme
-Plug 'lifepillar/vim-gruvbox8'
+Plug 'arcticicestudio/nord-vim'
 
 " lighline and bufferline
 Plug 'itchyny/lightline.vim'
