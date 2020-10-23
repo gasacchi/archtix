@@ -1,19 +1,19 @@
 set fish_greeting
 
 # fish syntax highlighting
-set fish_color_command 80E544 --bold
-set fish_color_quote 00C729 --italic
-set fish_color_redirection FFCB47
-set fish_color_end E83151
-set fish_color_error E83151
-set fish_color_param 00C729
-set fish_color_comment 005200
-set fish_color_selection --background='green'
-set fish_color_search_match --background='green'
-set fish_color_operator 80E544
-set fish_color_escape FFCB47
-set fish_color_autosuggestion 003B00
-set fish_color_cancel E83151
+set fish_color_command 88C0D0 --bold
+set fish_color_quote A3BE8C --italic
+set fish_color_redirection EBCB8B
+set fish_color_end BF616A
+set fish_color_error BF616A
+set fish_color_param 81A1C1
+set fish_color_comment 434C5E
+set fish_color_selection --background='#5E81AC'
+set fish_color_search_match --background='#5E81AC'
+set fish_color_operator 8FBCBB
+set fish_color_escape EBCB8B
+set fish_color_autosuggestion 81A1C1
+set fish_color_cancel BF616A
 
 # Alias 
 alias v=nvim
