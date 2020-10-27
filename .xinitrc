@@ -48,19 +48,20 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-# set keyboard layout to colemak
-setxkbmap --layout us --variant colemak &
+# set key layout to colemak
+setxkbmap -layout us -variant colemak &
 
-# start nitrogen for wallpaper
-nitrogen --restore &
+# run dunst notification server
+dunst &
 
-# start picom compositor
+# run picom composer
 picom -c -b &
 
-# loop for dwm 
-while true; do
-  dwm >/dev/null 2>&1
-done
+# run nitrogen to set wallpaper
+nitrogen --restore &
 
-# execute dwm
+# run dwmblocks
+dwmblocks &
+
+# exec dwm
 exec dwm
