@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =5
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/home/gasacchi/xxx/.dev/youtube/code/command-line/todo.md'
 let g:netrw_dirhist_5='/home/gasacchi'
 let g:netrw_dirhist_4='/home/gasacchi/.config/nvim/config'
 let g:netrw_dirhist_3='/home/gasacchi/.config/nvim/plugged/dracula/autoload/lightline'

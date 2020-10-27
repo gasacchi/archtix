@@ -54,7 +54,7 @@ static const Rule rules[] = {
   { "Chromium",  NULL,       NULL,       1 << 1,       0,           -1 },
   { "obs",  NULL,       NULL,       1 << 2,       0,           -1 },
   { "kdenlive",  NULL,       NULL,       1 << 2,       0,           -1 },
-  { "vlc",  NULL,       NULL,       1 << 2,       0,           -1 },
+  { "vlc",  NULL,       NULL,       1 << 3,       0,           -1 },
 
   /* if there is no rule for app */
   /* { NULL,       NULL,       NULL,       0,            False,       -1 }, */
