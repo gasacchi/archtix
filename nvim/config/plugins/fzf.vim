@@ -26,6 +26,8 @@ let g:fzf_action = {
   \ 'ctrl-v': 'vsplit' }
 " set to window float
 " let g:fzf_layout = {'up':'~90%', 'window': { 'width': 0.8, 'height': 0.8,'yoffset':0.5,'xoffset': 0.5, 'highlight': 'Todo', 'border': 'sharp' } }
+let g:fzf_layout = { 'down':  '40%'}
+
 
 " Customize fzf colors to match your color scheme
 let g:fzf_colors =
