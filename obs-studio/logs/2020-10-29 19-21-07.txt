@@ -1,0 +1,89 @@
+07:21:07 PM.917: CPU Name: Intel(R) Core(TM) i5-4300M CPU @ 2.60GHz
+07:21:07 PM.917: CPU Speed: 1574.617MHz
+07:21:07 PM.917: Physical Cores: 2, Logical Cores: 4
+07:21:07 PM.917: Physical Memory: 7653MB Total, 6492MB Free
+07:21:07 PM.917: Kernel Version: Linux 5.8.16_1
+07:21:07 PM.917: Distribution: "void" Unknown
+07:21:07 PM.918: Window System: X11.0, Vendor: The X.Org Foundation, Version: 1.20.9
+07:21:07 PM.919: Portable mode: false
+07:21:07 PM.995: OBS 26.0.2 (linux)
+07:21:07 PM.995: ---------------------------------
+07:21:07 PM.996: ---------------------------------
+07:21:07 PM.996: audio settings reset:
+07:21:07 PM.996: 	samples per sec: 48000
+07:21:07 PM.996: 	speakers:        2
+07:21:08 PM.003: ---------------------------------
+07:21:08 PM.003: Initializing OpenGL...
+07:21:08 PM.032: Loading up OpenGL on adapter Intel Open Source Technology Center Mesa DRI Intel(R) HD Graphics 4600 (HSW GT2)
+07:21:08 PM.032: OpenGL loaded successfully, version 4.5 (Core Profile) Mesa 20.2.1, shading language 4.50
+07:21:08 PM.049: ---------------------------------
+07:21:08 PM.049: video settings reset:
+07:21:08 PM.049: 	base resolution:   1366x768
+07:21:08 PM.049: 	output resolution: 1092x614
+07:21:08 PM.049: 	downscale filter:  Bicubic
+07:21:08 PM.049: 	fps:               30/1
+07:21:08 PM.049: 	format:            NV12
+07:21:08 PM.049: 	YUV mode:          709/Partial
+07:21:08 PM.049: NV12 texture support not available
+07:21:08 PM.052: Audio monitoring device:
+07:21:08 PM.052: 	name: Default
+07:21:08 PM.052: 	id: default
+07:21:08 PM.052: ---------------------------------
+07:21:08 PM.055: Failed to load 'en-US' text for module: 'decklink-ouput-ui.so'
+07:21:08 PM.168: A DeckLink iterator could not be created.  The DeckLink drivers may not be installed
+07:21:08 PM.168: No blackmagic support
+07:21:08 PM.212: os_dlopen(libnvidia-encode.so.1->libnvidia-encode.so.1): libnvidia-encode.so.1: cannot open shared object file: No such file or directory
+07:21:08 PM.212: 
+07:21:08 PM.212: FFMPEG VAAPI supported
+07:21:08 PM.237: VLC found, VLC video source enabled
+07:21:08 PM.237: ---------------------------------
+07:21:08 PM.237:   Loaded Modules:
+07:21:08 PM.237:     vlc-video.so
+07:21:08 PM.237:     text-freetype2.so
+07:21:08 PM.237:     rtmp-services.so
+07:21:08 PM.237:     obs-x264.so
+07:21:08 PM.237:     obs-transitions.so
+07:21:08 PM.237:     obs-outputs.so
+07:21:08 PM.237:     obs-libfdk.so
+07:21:08 PM.237:     obs-filters.so
+07:21:08 PM.237:     obs-ffmpeg.so
+07:21:08 PM.237:     linux-v4l2.so
+07:21:08 PM.237:     linux-pulseaudio.so
+07:21:08 PM.237:     linux-jack.so
+07:21:08 PM.237:     linux-decklink.so
+07:21:08 PM.237:     linux-capture.so
+07:21:08 PM.237:     linux-alsa.so
+07:21:08 PM.237:     image-source.so
+07:21:08 PM.237:     frontend-tools.so
+07:21:08 PM.237:     decklink-ouput-ui.so
+07:21:08 PM.237: ---------------------------------
+07:21:08 PM.237: ==== Startup complete ===============================================
+07:21:08 PM.241: obs-data.c: [obs_data_create_from_json_file_safe] attempting backup file
+07:21:08 PM.242: All scene data cleared
+07:21:08 PM.242: ------------------------------------------------
+07:21:08 PM.251: pulse-input: Unable to get server info !
+07:21:08 PM.251: [Loaded global audio device]: 'Desktop Audio'
+07:21:08 PM.251: pulse-input: Unable to get server info !
+07:21:08 PM.251: [Loaded global audio device]: 'Mic/Aux'
+07:21:08 PM.292: pulse-input: Unable to get server info !
+07:21:08 PM.292: v4l2-input: Start capture from /dev/video2
+07:21:08 PM.293: v4l2-input: Input: 0
+07:21:08 PM.293: v4l2-input: Resolution: 640x480
+07:21:08 PM.293: v4l2-input: Pixelformat: YU12
+07:21:08 PM.293: v4l2-input: Linesize: 640 Bytes
+07:21:08 PM.293: v4l2-input: Framerate: 30.00 fps
+07:21:08 PM.295: Switched to scene 'Main'
+07:21:08 PM.295: ------------------------------------------------
+07:21:08 PM.295: Loaded scenes:
+07:21:08 PM.295: - scene 'Main':
+07:21:08 PM.303:     - source: 'Image' (image_source)
+07:21:08 PM.303:     - source: 'Video Capture Device (V4L2)' (v4l2_input)
+07:21:08 PM.303:         - filter: 'Chroma Key' (chroma_key_filter)
+07:21:08 PM.303:     - source: 'Audio Input Capture (PulseAudio)' (pulse_input_capture)
+07:21:08 PM.303: ------------------------------------------------
+07:21:11 PM.336: ==== Shutting down ==================================================
+07:21:11 PM.353: v4l2-input: Stopped capture after 78 frames
+07:21:11 PM.354: All scene data cleared
+07:21:11 PM.354: ------------------------------------------------
+07:21:11 PM.383: Failed to fetch parent window geometry!
+07:21:11 PM.417: Failed to fetch parent window geometry!

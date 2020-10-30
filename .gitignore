@@ -17,7 +17,10 @@ dwm/dwm
 VirtualBox/
 pulse/
 glib-2.0/
-obs-studio/
 kdenlive-layoutsrc
 kdenliverc
 vlc/
+GIMP/
+user-dirs.dirs
+user-dirs.locale
+

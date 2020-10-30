@@ -38,18 +38,18 @@ alias anime='cd ~/xxx/.anime/'
 # mpd
 
 # rust utilities
-# alias ls='exa'
-# alias cat='bat'
-# alias find='fd'
-# alias du='dust'
-# alias grep='rg'
-# alias ps='procs'
-# alias sed='sd'
-# alias loc='tokei'
-# alias top='btm' 
-# alias grex='grex'
-# alias tldr='tldr'
-# alias hyperfine='hyperfine'
+alias ls='exa'
+alias cat='bat'
+alias find='fd'
+alias du='dust'
+alias grep='rg'
+alias ps='procs'
+alias sed='sd'
+alias loc='tokei'
+alias top='btm' 
+alias grex='grex'
+alias tldr='tldr'
+alias hyperfine='hyperfine'
 
 # PATH
 # FZF
