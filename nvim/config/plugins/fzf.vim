@@ -15,8 +15,8 @@
 "             (__)  (____)(__)    ()    \/  (____)(_/\/\_)
 " ========================================================================
 " Author:  Gasacchi
-" website: https://gasacchi.com
-" licence: GPL
+" Website: https://gasacchi.com
+" Licence: GPL
 " ========================================================================
 
 " key bindings
@@ -36,7 +36,7 @@ let g:fzf_colors =
   \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
   \ 'hl+':     ['fg', 'Statement'],
   \ 'info':    ['fg', 'PreProc'],
-  \ 'border':  ['fg', 'Ignore'],
+  \ 'border':  ['fg', 'Function'],
   \ 'prompt':  ['fg', 'Conditional'],
   \ 'pointer': ['fg', 'Exception'],
   \ 'marker':  ['fg', 'Keyword'],
