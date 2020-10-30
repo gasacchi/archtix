@@ -13,7 +13,11 @@
   - etc
     - linux-headers
     - lm_sensors: temperature and fan info
+    - doas: openbsd port alternative sudo
   
+  - shell and costumization
+    - fishshell
+    - startship
 
   - Sound with ( Pulseaudio )
     - pulseaudio
@@ -40,6 +44,12 @@
     - libnotify
     - dunst
     - dbus
+
+  - Productivity
+    - obs
+    - kdenlive
+    - gimp
+    - chromium
 
   - Droid cam ( webcam with smartphone )
     - v4l2loopback
