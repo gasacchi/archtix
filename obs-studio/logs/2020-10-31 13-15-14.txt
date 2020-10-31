@@ -1,0 +1,136 @@
+01:15:14 PM.032: CPU Name: Intel(R) Core(TM) i5-4300M CPU @ 2.60GHz
+01:15:14 PM.032: CPU Speed: 2784.405MHz
+01:15:14 PM.032: Physical Cores: 2, Logical Cores: 4
+01:15:14 PM.032: Physical Memory: 7653MB Total, 5260MB Free
+01:15:14 PM.033: Kernel Version: Linux 5.8.16_1
+01:15:14 PM.033: Distribution: "void" Unknown
+01:15:14 PM.033: Window System: X11.0, Vendor: The X.Org Foundation, Version: 1.20.9
+01:15:14 PM.034: Portable mode: false
+01:15:14 PM.084: OBS 26.0.2 (linux)
+01:15:14 PM.084: ---------------------------------
+01:15:14 PM.085: ---------------------------------
+01:15:14 PM.085: audio settings reset:
+01:15:14 PM.085: 	samples per sec: 48000
+01:15:14 PM.085: 	speakers:        2
+01:15:14 PM.090: ---------------------------------
+01:15:14 PM.090: Initializing OpenGL...
+01:15:14 PM.122: Loading up OpenGL on adapter Intel Open Source Technology Center Mesa DRI Intel(R) HD Graphics 4600 (HSW GT2)
+01:15:14 PM.122: OpenGL loaded successfully, version 4.5 (Core Profile) Mesa 20.2.1, shading language 4.50
+01:15:14 PM.136: ---------------------------------
+01:15:14 PM.136: video settings reset:
+01:15:14 PM.136: 	base resolution:   1366x768
+01:15:14 PM.136: 	output resolution: 1364x768
+01:15:14 PM.136: 	downscale filter:  Bicubic
+01:15:14 PM.136: 	fps:               30/1
+01:15:14 PM.136: 	format:            NV12
+01:15:14 PM.136: 	YUV mode:          709/Partial
+01:15:14 PM.136: NV12 texture support not available
+01:15:14 PM.136: Audio monitoring device:
+01:15:14 PM.136: 	name: Default
+01:15:14 PM.136: 	id: default
+01:15:14 PM.137: ---------------------------------
+01:15:14 PM.138: Failed to load 'en-US' text for module: 'decklink-ouput-ui.so'
+01:15:14 PM.229: A DeckLink iterator could not be created.  The DeckLink drivers may not be installed
+01:15:14 PM.229: No blackmagic support
+01:15:14 PM.240: os_dlopen(libnvidia-encode.so.1->libnvidia-encode.so.1): libnvidia-encode.so.1: cannot open shared object file: No such file or directory
+01:15:14 PM.240: 
+01:15:14 PM.240: FFMPEG VAAPI supported
+01:15:14 PM.248: VLC found, VLC video source enabled
+01:15:14 PM.248: ---------------------------------
+01:15:14 PM.248:   Loaded Modules:
+01:15:14 PM.248:     vlc-video.so
+01:15:14 PM.248:     text-freetype2.so
+01:15:14 PM.248:     rtmp-services.so
+01:15:14 PM.248:     obs-x264.so
+01:15:14 PM.248:     obs-transitions.so
+01:15:14 PM.248:     obs-outputs.so
+01:15:14 PM.248:     obs-libfdk.so
+01:15:14 PM.248:     obs-filters.so
+01:15:14 PM.248:     obs-ffmpeg.so
+01:15:14 PM.248:     linux-v4l2.so
+01:15:14 PM.248:     linux-pulseaudio.so
+01:15:14 PM.248:     linux-jack.so
+01:15:14 PM.248:     linux-decklink.so
+01:15:14 PM.248:     linux-capture.so
+01:15:14 PM.248:     linux-alsa.so
+01:15:14 PM.248:     image-source.so
+01:15:14 PM.248:     frontend-tools.so
+01:15:14 PM.248:     decklink-ouput-ui.so
+01:15:14 PM.248: ---------------------------------
+01:15:14 PM.248: ==== Startup complete ===============================================
+01:15:14 PM.252: All scene data cleared
+01:15:14 PM.252: ------------------------------------------------
+01:15:14 PM.257: pulse-input: Server name: 'pulseaudio 13.0'
+01:15:14 PM.258: pulse-input: Audio format: s16le, 44100 Hz, 2 channels
+01:15:14 PM.258: pulse-input: Started recording from 'alsa_input.usb-FIFINE_Microphones_FIFINE_K678_Microphone_REV1.0-00.analog-stereo'
+01:15:14 PM.259: xshm-input: Geometry 1366x768 @ 0,0
+01:15:14 PM.259: v4l2-input: Start capture from /dev/video2
+01:15:14 PM.259: v4l2-input: Input: 0
+01:15:14 PM.259: v4l2-input: Resolution: 640x480
+01:15:14 PM.260: v4l2-input: Pixelformat: YU12
+01:15:14 PM.260: v4l2-input: Linesize: 640 Bytes
+01:15:14 PM.260: v4l2-input: Framerate: 30.00 fps
+01:15:14 PM.261: Switched to scene 'Main'
+01:15:14 PM.261: ------------------------------------------------
+01:15:14 PM.261: Loaded scenes:
+01:15:14 PM.261: - scene 'Main':
+01:15:14 PM.261:     - source: 'Audio Input Capture (PulseAudio)' (pulse_input_capture)
+01:15:14 PM.261:         - filter: 'Noise Gate' (noise_gate_filter)
+01:15:14 PM.261:         - filter: 'Compressor' (compressor_filter)
+01:15:14 PM.261:         - filter: 'Limiter' (limiter_filter)
+01:15:14 PM.261:     - source: 'Screen Capture (XSHM)' (xshm_input)
+01:15:14 PM.261:     - source: 'Video Capture Device (V4L2)' (v4l2_input)
+01:15:14 PM.261:         - filter: 'Chroma Key' (chroma_key_filter)
+01:15:14 PM.261:         - filter: 'Color Key' (color_key_filter)
+01:15:14 PM.261:         - filter: 'Color Correction' (color_filter)
+01:15:14 PM.261: ------------------------------------------------
+01:15:14 PM.782: adding 42 milliseconds of audio buffering, total audio buffering is now 42 milliseconds (source: Audio Input Capture (PulseAudio))
+01:15:14 PM.782: 
+01:16:23 PM.877: v4l2-input: /dev/video1 seems to not support video capture
+01:16:23 PM.877: v4l2-input: Found device 'Droidcam' at /dev/video2
+01:16:23 PM.878: v4l2-input: Found device 'Integrated Camera: Integrated C' at /dev/video0
+01:16:23 PM.878: v4l2-input: Found input 'loopback' (Index 0)
+01:16:23 PM.878: v4l2-input: Pixelformat: Planar YUV 4:2:0 (available)
+01:16:23 PM.878: v4l2-input: Pixelformat: RGB3 (Emulated) (unavailable)
+01:16:23 PM.878: v4l2-input: Pixelformat: BGR3 (Emulated) (available)
+01:16:23 PM.878: v4l2-input: Pixelformat: YV12 (Emulated) (available)
+01:16:23 PM.879: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+01:16:23 PM.879: v4l2-input: Pixelformat: Planar YUV 4:2:0 (available)
+01:16:23 PM.879: v4l2-input: Pixelformat: RGB3 (Emulated) (unavailable)
+01:16:23 PM.879: v4l2-input: Pixelformat: BGR3 (Emulated) (available)
+01:16:23 PM.879: v4l2-input: Pixelformat: YV12 (Emulated) (available)
+01:16:23 PM.879: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+01:16:23 PM.880: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+01:16:23 PM.880: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+01:16:30 PM.116: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+01:16:30 PM.171: v4l2-input: Stopped capture after 1894 frames
+01:16:30 PM.171: v4l2-input: Start capture from /dev/video2
+01:16:30 PM.171: v4l2-input: Input: 0
+01:16:30 PM.171: v4l2-input: Resolution: 640x480
+01:16:30 PM.171: v4l2-input: Pixelformat: BGR3
+01:16:30 PM.171: v4l2-input: Linesize: 1920 Bytes
+01:16:30 PM.171: v4l2-input: Framerate: 30.00 fps
+01:16:32 PM.898: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+01:16:32 PM.924: v4l2-input: Stopped capture after 70 frames
+01:16:32 PM.925: v4l2-input: Start capture from /dev/video2
+01:16:32 PM.925: v4l2-input: Input: 0
+01:16:32 PM.925: v4l2-input: Resolution: 640x480
+01:16:32 PM.926: v4l2-input: Pixelformat: YU12
+01:16:32 PM.926: v4l2-input: Linesize: 640 Bytes
+01:16:32 PM.926: v4l2-input: Framerate: 30.00 fps
+01:16:37 PM.069: v4l2-input: /dev/video1 seems to not support video capture
+01:16:37 PM.070: v4l2-input: Found device 'Droidcam' at /dev/video2
+01:16:37 PM.070: v4l2-input: Found device 'Integrated Camera: Integrated C' at /dev/video0
+01:16:37 PM.070: v4l2-input: Found input 'loopback' (Index 0)
+01:16:37 PM.071: v4l2-input: Pixelformat: Planar YUV 4:2:0 (available)
+01:16:37 PM.071: v4l2-input: Pixelformat: RGB3 (Emulated) (unavailable)
+01:16:37 PM.071: v4l2-input: Pixelformat: BGR3 (Emulated) (available)
+01:16:37 PM.071: v4l2-input: Pixelformat: YV12 (Emulated) (available)
+01:16:37 PM.071: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+01:16:37 PM.072: v4l2-input: Pixelformat: Planar YUV 4:2:0 (available)
+01:16:37 PM.072: v4l2-input: Pixelformat: RGB3 (Emulated) (unavailable)
+01:16:37 PM.072: v4l2-input: Pixelformat: BGR3 (Emulated) (available)
+01:16:37 PM.072: v4l2-input: Pixelformat: YV12 (Emulated) (available)
+01:16:37 PM.072: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+01:16:37 PM.073: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+01:16:37 PM.074: v4l2-input: Stepwise and Continuous framerates are currently hardcoded

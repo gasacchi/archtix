@@ -50,6 +50,7 @@
     - kdenlive
     - gimp
     - chromium
+    - mdp: presentation on terminal
 
   - Droid cam ( webcam with smartphone )
     - v4l2loopback
