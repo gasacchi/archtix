@@ -19,9 +19,8 @@ pulse/
 glib-2.0/
 kdenlive-layoutsrc
 kdenliverc
-obs-studio/*
 vlc/
 GIMP/
 user-dirs.dirs
 user-dirs.locale
-
+obs-studio/
