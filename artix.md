@@ -36,6 +36,7 @@ curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
 * Utility
   - unzip
   - unrar
+  - android-file-transfer
 
 * Create user dir
   - xdg-user-dirs
@@ -44,9 +45,7 @@ curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
   ```
 
 * Sound Support
-  - pulseaudio
-  - ncpamixer
-  - pamixer
+  - amixer
 
 * Preferable Font
 ```

@@ -5,6 +5,9 @@ static const Block blocks[] = {
   /* cpu load */
   {"   ", "~/.config/suckless/dwmblocks/scripts/cpu.sh",     1,     0},
 
+  /* watt */
+  {"", "~/.config/suckless/dwmblocks/scripts/watt.sh",     1,     0},
+
   /* cpu temp */
   {" ", "~/.config/suckless/dwmblocks/scripts/temp.sh",     1,     0},
   /* fan speed */
@@ -18,7 +21,7 @@ static const Block blocks[] = {
 
   /* backlight */
   /* {"ﯧ ", "~/.config/suckless/dwmblocks/scripts/backlight.sh",     0,     12}, */
-
+  
   /* volume level */
   {"", "~/.config/suckless/dwmblocks/scripts/volume.sh",     0,     10},
 

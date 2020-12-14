@@ -151,7 +151,7 @@ static Key keys[] = {
 
   /* app launch */
   /* { MODKEY,                       XK_s,                                spawn,                     SHCMD("st -e alsamixer") }, */
-  { MODKEY,                       XK_w,                                spawn,                     SHCMD("chromium") },
+  { MODKEY,                       XK_w,                                spawn,                     SHCMD("brave-beta") },
 
 
 };
