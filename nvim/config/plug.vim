@@ -46,8 +46,8 @@ Plug 'tpope/vim-surround'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Plugin for fzf
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+ " Plug 'junegunn/fzf.vim'
 
 " Plug for auto pair
 Plug 'jiangmiao/auto-pairs'
@@ -62,7 +62,7 @@ Plug 'luochen1990/rainbow'
 Plug 'chrisbra/Colorizer'
 
 " theme
-Plug 'arcticicestudio/nord-vim'
+Plug 'ayu-theme/ayu-vim'
 
 " lighline and bufferline
 Plug 'itchyny/lightline.vim'
@@ -70,7 +70,7 @@ Plug 'mengelbrecht/lightline-bufferline'
 
 " syntax support
 Plug 'amiralies/vim-rescript'
-Plug 'pangloss/vim-javascript'
+" Plug 'pangloss/vim-javascript'
 
 call plug#end()
 

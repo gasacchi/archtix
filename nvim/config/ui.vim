@@ -27,7 +27,8 @@ if exists('+termguicolors')
 endif
 
 " Theme
-colorscheme nord
+colorscheme ayu
+let ayucolor="dark"
 
 
 " Transparent

@@ -27,14 +27,14 @@ static const int topbar                     = 1;        /* 0 means bottom bar */
 static const char *fonts[]                  = { "JetBrainsMono Nerd Font:size=9" };
 static const char dmenufont[]               = "JetBrainsMono Nerd Font:size=9";
 /* background color */
-static const char col_bg[]                  = "#2E3440"; 
+static const char col_bg[]                  = "#0A0E14"; 
 /* inactive border color */
-static const char col_border_inactive[]     = "#3B4252";
+static const char col_border_inactive[]     = "#686868";
 /* font color */
-static const char col_fg[]                  = "#81A1C1"; 
+static const char col_fg[]                  = "#59C2FF"; 
 
 /* top bar second color */
-static const char col_bg_second[]           = "#81A1C1"; 
+static const char col_bg_second[]           = "#59C2FF"; 
 static const char *colors[][3]              = {
   /*               fg         bg         border   */
   [SchemeNorm] = { col_fg, col_bg, col_border_inactive },
