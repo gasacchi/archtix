@@ -46,8 +46,8 @@ Plug 'tpope/vim-surround'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Plugin for fzf
-" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
- " Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 " Plug for auto pair
 Plug 'jiangmiao/auto-pairs'
