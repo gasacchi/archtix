@@ -12,6 +12,15 @@
 * Admin
   - opendoas
 
+* Kernelbuild
+  - base-devel
+  - xmlto
+  - kmod
+  - inetutils
+  - bc
+  - libelf
+  - git
+
 * Editor
 ```
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
